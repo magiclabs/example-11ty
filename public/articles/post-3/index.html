@@ -13,7 +13,7 @@
 <script src="https://cdn.jsdelivr.net/npm/magic-sdk/dist/magic.js"></script>
 <!-- 2. Initialize Magic -->
 <script>
-  const magic = new Magic("pk_test_C156DE7D708EC067"); // Your public key
+  const magic = new Magic("pk_test_97D603C9C1C3AB4C"); // Replace with your public key
 </script>
 
 <!-- 3. Add loader to wait for Magic SDK -->
@@ -30,9 +30,9 @@
 <!-- 5. Update visible pages depending on whether or not the user is logged in -->
 <script>
 
-  let privatePages = ['/profile', '/', '/logout'];
+  let privatePages = ['/profile/', '/'];
 
-  let publicPages = ['/login']
+  let publicPages = ['/login/']
 
   const loginElement = document.querySelector("#login")
   const profileElement = document.querySelector("#profile")
@@ -97,7 +97,7 @@
         .logout();
       window
         .location
-        .replace("http://localhost:8080/login");
+        .replace("/login");
     } catch (error) {
       // Handle errors if required!
       console.log('Ran into this error while logging out: ', error);

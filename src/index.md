@@ -23,7 +23,7 @@ templateEngineOverride: njk,md
   const loginMessage = `Please log in to see my blog!`;
 
   try {
-    magic.user.getMetadata();
+    magic.user.isLoggedIn();
     contentElement.innerHTML = articles;
     } catch {
       // Handle errors if required!
