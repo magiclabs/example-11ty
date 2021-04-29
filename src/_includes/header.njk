@@ -32,12 +32,17 @@ const loaderElement = document.querySelector("#loader");
 const getUser = async () => {
   // Gets the page user is currently on
   const currentPath = window.location.pathname;
+  const test = window.location.origin
+  console.log('currentPath: ', currentPath);
+  console.log('test: ', test);
 
   // Checks if user is currently logged into the Magic SDK
   const isLoggedIn = await magic.user.isLoggedIn();
+  console.log('isLoggedIn: ', isLoggedIn)
 
   // If the user is logged in...
   if (isLoggedIn) {
+    console.log('isLoggedIn inside IF statement: ', isLoggedIn)
     // ...prevent them from accessing public pages.
     if (publicPages.includes(currentPath)) {
       window.location.replace("/");
