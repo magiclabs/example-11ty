@@ -18,8 +18,18 @@
 
 <!-- 5. Update visible pages depending on whether or not the user is logged in -->
 <script>
-let privatePages = ["/profile/", "/", "/articles/post-1/", "/articles/post-2/", "/articles/post-3/"];
-let publicPages = ["/login/"];
+let privatePages = [
+  "/",
+  "/profile/",
+  "/profile",
+  "/articles/post-1/",
+  "/articles/post-1",
+  "/articles/post-2/",
+  "/articles/post-2",
+  "/articles/post-3/",
+  "/articles/post-3",
+];
+let publicPages = ["/login/", "/login"];
 
 const loginElement = document.querySelector("#login");
 const profileElement = document.querySelector("#profile");
@@ -33,16 +43,12 @@ const getUser = async () => {
   // Gets the page user is currently on
   const currentPath = window.location.pathname;
   const test = window.location.origin
-  console.log('currentPath: ', currentPath);
-  console.log('test: ', test);
 
   // Checks if user is currently logged into the Magic SDK
   const isLoggedIn = await magic.user.isLoggedIn();
-  console.log('isLoggedIn: ', isLoggedIn)
 
   // If the user is logged in...
   if (isLoggedIn) {
-    console.log('isLoggedIn inside IF statement: ', isLoggedIn)
     // ...prevent them from accessing public pages.
     if (publicPages.includes(currentPath)) {
       window.location.replace("/");
