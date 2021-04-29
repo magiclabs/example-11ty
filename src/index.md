@@ -14,19 +14,19 @@ templateEngineOverride: njk,md
 <!-- 1. Only share articles with logged in users -->
 <script>
 // Assumes user is already logged in
-  let contentElement = document.getElementById('content');
-  const articles = `<ul>
-  {% for article in collections.articles %}
-  <li><a href="{{ article.url }}">{{ article.data.title }}</li>
-  {% endfor %}
-  </ul>`;
-  const loginMessage = `Please log in to see my blog!`;
+let contentElement = document.getElementById("content");
+const articles = `<ul>
+{% for article in collections.articles %}
+<li><a href="{{ article.url }}">{{ article.data.title }}</li>
+{% endfor %}
+</ul>`;
+const loginMessage = `Please log in to see my blog!`;
 
-  try {
-    magic.user.isLoggedIn();
-    contentElement.innerHTML = articles;
-    } catch {
-      // Handle errors if required!
-      contentElement.innerHTML = loginMessage;
-      }
+try {
+  magic.user.isLoggedIn();
+  contentElement.innerHTML = articles;
+} catch {
+  // Handle errors if required!
+  contentElement.innerHTML = loginMessage;
+}
 </script>

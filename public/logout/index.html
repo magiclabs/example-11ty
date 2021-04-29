@@ -96,7 +96,7 @@ const magic = new Magic('pk_test_C156DE7D708EC067');
     try {
       const isLoggedIn = await magic.user.isLoggedIn();
       await magic.user.logout();
-      window.location.replace("http://localhost:8080/login");
+      window.location.replace(`${window.location.origin}/login`);
     } catch (error) {
       // Handle errors if required!
       console.log('Ran into this error while logging out: ', error);
@@ -120,7 +120,7 @@ const magic = new Magic('pk_test_C156DE7D708EC067');
     try {
       const isLoggedIn = await magic.user.isLoggedIn();
       await magic.user.logout();
-      window.location.replace("http://localhost:8080/login");
+      window.location.replace(`${window.location.origin}/login`);
     } catch (error) {
       // Handle errors if required!
       console.log('Ran into this error while logging out: ', error);
