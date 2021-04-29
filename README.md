@@ -1,6 +1,6 @@
 
 # Demo
-Here's a demo of the Magic x 11ty blog: TBD.
+Here's a demo of the Magic x 11ty blog: [example-11ty.vercel.app](example-11ty.vercel.app).
 
 # Quick Start
 1. `git clone https://github.com/seemcat/magic-11ty.git`
@@ -10,4 +10,4 @@ Here's a demo of the Magic x 11ty blog: TBD.
 `npm start`
 
 # Tutorial
-🪄 For a step-by-step tutorial on how to integrate Magic with Stripe: [https://magic.link/posts/magic-11ty](https://magic.link/posts/magic-11ty). 🍰
+🪄 For a step-by-step tutorial on how to integrate Magic with 11ty: [https://magic.link/posts/magic-11ty](https://magic.link/posts/magic-11ty). 🍰
